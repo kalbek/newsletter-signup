@@ -1,7 +1,23 @@
+:root {
+  --dark-slate-gray: hsl(234, 29%, 20%);
+  --charcol-gray: hsl(235, 18%, 26%);
+  --gray: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
 body {
@@ -30,9 +46,69 @@ main {
 }
 
 .hero {
-  outline: 1px solid red;
   position: absolute;
   top: 31%;
   width: 100%;
   height: 100%;
+  padding: 2rem 1rem;
+  color: var(--dark-slate-gray);
+}
+
+.hero h1 {
+  font-family: "Roboto-Bold";
+  font-size: 40px;
+  padding-bottom: 1rem;
+}
+
+ul li,
+.sub-text p {
+  list-style: none;
+  font-family: "Roboto-Regular";
+}
+
+ul li {
+  margin-left: 10%;
+  list-style-image: url("./assets/images/icon-list.svg");
+}
+
+.sub-text {
+  padding-bottom: 0.5rem;
+}
+
+ul li {
+  padding: 0.5rem 1rem;
+}
+
+.bullet {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid red;
+  background-image: url("./assets/images/icon-list.svg");
+}
+
+label[for="email"] {
+  color: var(--dark-slate-gray);
+  font-family: "Roboto-Bold";
+  font-size: 12px;
+}
+
+.email {
+  padding-top: 2rem;
+  padding-left: 0.5rem;
+}
+
+.email input {
+  height: 3rem;
+  width: 100%;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+input::placeholder {
+    padding: 1rem;
+    font-size: 15px;
+}
+
+input {
+    margin-top: 0.7rem;
 }
